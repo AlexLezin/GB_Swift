@@ -2,7 +2,11 @@
 //2. Добавить ему несколько методов высшего порядка, полезных для этой коллекции (пример: filter для массивов)
 //3. * Добавить свой subscript, который будет возвращать nil в случае обращения к несуществующему индексу.
 
-struct Queue<T: Equatable> {
+struct Queue<T: Equatable>: Comparable {
+    static func < (lhs: Queue<T>, rhs: Queue<T>) -> Bool {
+        <#code#>
+    }
+    
     private var elements: [T] = []
     mutating func push(_ elts: T...) {
         for i in elts {
